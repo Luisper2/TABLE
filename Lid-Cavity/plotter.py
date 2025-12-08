@@ -117,7 +117,7 @@ if __name__ == '__main__':
         legend2 = ax.legend(handles = reynolds_legend, loc = f'{'lower' if orientation != 'x' else 'upper'} right', title = 'Reynolds')
         ax.add_artist(legend1)
 
-        ax.set_title(f'Combined {'Horizontal' if orientation == 'x' else 'Vertical'} Profiles')
+        ax.set_title(f'{'v' if orientation == 'x' else 'u'}-velocity')
         plt.savefig(os.path.join(combine_path, out_name), bbox_inches = 'tight', dpi = 250)
         plt.close(fig)
 
